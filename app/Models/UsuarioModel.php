@@ -29,7 +29,7 @@ class UsuarioModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'nome'                  => 'required|alpha_numeric_space|min_length[3]|max_length[250]',
+        'nome'                  => 'required|min_length[3]|max_length[250]',
         'email'                 => 'required|valid_email|max_length[250]|is_unique[usuarios.email,id,{id}]',
         'password'              => 'required|min_length[6]',
         'password_confirmation' => 'required_with[password]|matches[password]'

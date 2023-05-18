@@ -47,6 +47,10 @@ $routes->post('usuarios/upload', 'Usuario::upload');
 $routes->get('usuarios/criar', 'Usuario::criar');
 $routes->get('usuarios/recuperausuarios', 'Usuario::recuperaUsuarios');
 
+//rotas de grupos
+$routes->get('grupos', 'Grupos::index');
+$routes->get('grupos/recuperagrupos', 'Grupos::recuperagrupos');
+
 //rotas de departamentos
 $routes->get('departamentos', 'Departamento::index');
 /*

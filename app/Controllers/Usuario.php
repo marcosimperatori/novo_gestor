@@ -44,14 +44,14 @@ class Usuario extends BaseController
                     'src'   => site_url("usuarios/imagem/$usuario->imagem"),
                     'class' => 'rounded-circle img-fluid',
                     'alt'   => esc($usuario->nome),
-                    'width' => '40'
+                    'width' => '45'
                 ];
             } else {
                 $imagem = [
                     'src'   => site_url("recursos/img/user_sem_imagem.png"),
                     'class' => 'rounded-circle img-fluid',
                     'alt'   => "Usuário sem imagem",
-                    'width' => '40'
+                    'width' => '45'
                 ];
             }
 
@@ -309,7 +309,7 @@ class Usuario extends BaseController
 
     private function removeImagemDoFileSystem(string $imagem)
     {
-        $caminhoImagem = WRITEPATH . 'uploads/usuarios' . $imagem;
+        $caminhoImagem = WRITEPATH . 'uploads/usuarios/' . $imagem;
 
         if (is_file($caminhoImagem)) {
             unlink($caminhoImagem);

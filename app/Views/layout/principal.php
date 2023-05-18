@@ -75,7 +75,7 @@
           <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a>
         </li>
 
-        <li class="<?php echo (url_is('departamentos*') ? 'active' : ''); ?>">
+        <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>">
           <a href="forms.html"> <i class="icon-padnote"></i>Forms </a>
         </li>
 
@@ -83,7 +83,7 @@
           <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
             <li class="<?php echo (url_is('clientes*') ? 'active' : ''); ?>"><a href="<?php echo site_url('clientes') ?>">Clientes</a></li>
             <li class="<?php echo (url_is('usuarios*') ? 'active' : ''); ?>"><a href="<?php echo site_url('usuarios') ?>">Usuários</a></li>
-            <li class="<?php echo (url_is('departamentos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('departamentos') ?>">Departamentos</a></li>
+            <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('grupos') ?>">Grupos</a></li>
           </ul>
         </li>
 
