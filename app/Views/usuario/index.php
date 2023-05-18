@@ -10,13 +10,7 @@
 <?php $this->endSection(); ?>
 
 <?php echo $this->section('caminho'); ?>
-<!-- Breadcrumb-->
-<div class="container-fluid">
-  <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo site_url('/'); ?>">Home</a></li>
-    <li class="breadcrumb-item active">Listagem de usuários </li>
-  </ul>
-</div>
+
 <?php $this->endSection(); ?>
 
 <?php echo $this->section('conteudo'); ?>
@@ -25,6 +19,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="block margin-bottom-sm">
+
+          <a href="<?php echo site_url('usuarios/criar'); ?>" class="btn btn-danger btn-sm mb-4" title="Permite incluir um novo usuário no sistema">Novo usuário</a>
+
           <div class="table-responsive">
             <table id="ajaxtable" class="table table-striped table-sm" style="width: 100%;">
               <thead>

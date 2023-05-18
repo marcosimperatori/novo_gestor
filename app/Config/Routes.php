@@ -38,7 +38,13 @@ $routes->get('clientes', 'Cliente::index');
 $routes->get('usuarios', 'Usuario::index');
 $routes->get('usuarios/exibir/(:num)', 'Usuario::exibir/$1');
 $routes->get('usuarios/editar/(:num)', 'Usuario::editar/$1');
+$routes->match(['get', 'post'], 'usuarios/excluir/(:num)', 'Usuario::excluir/$1');
+$routes->get('usuarios/imagem/(:any)', 'Usuario::imagem/$1');
+$routes->get('usuarios/editarimagem/(:num)', 'Usuario::editarImagem/$1');
 $routes->post('usuarios/atualizar', 'Usuario::atualizar');
+$routes->post('usuarios/cadastrar', 'Usuario::cadastrar');
+$routes->post('usuarios/upload', 'Usuario::upload');
+$routes->get('usuarios/criar', 'Usuario::criar');
 $routes->get('usuarios/recuperausuarios', 'Usuario::recuperaUsuarios');
 
 //rotas de departamentos

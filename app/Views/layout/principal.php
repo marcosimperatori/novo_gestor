@@ -62,17 +62,31 @@
       </div>
       <!-- Sidebar Navidation Menus--><span class="heading">Opções</span>
       <ul class="list-unstyled">
-        <li class="active"><a href="<?php echo site_url('/') ?>"> <i class="icon-home"></i>Home </a></li>
-        <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
-        <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-        <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+
+        <li class="<?php echo (url_is('/') ? 'active' : ''); ?>">
+          <a href="<?php echo site_url('/') ?>"> <i class="icon-home"></i>Home </a>
+        </li>
+
+        <li class="<?php echo (url_is('usuarios*') ? 'active' : ''); ?>">
+          <a href="tables.html"> <i class="icon-grid"></i>Tables </a>
+        </li>
+
+        <li class="<?php echo (url_is('clientes*') ? 'active' : ''); ?>">
+          <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a>
+        </li>
+
+        <li class="<?php echo (url_is('departamentos*') ? 'active' : ''); ?>">
+          <a href="forms.html"> <i class="icon-padnote"></i>Forms </a>
+        </li>
+
         <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Cadastros </a>
           <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-            <li><a href="<?php echo site_url('clientes') ?>">Clientes</a></li>
-            <li><a href="<?php echo site_url('usuarios') ?>">Usuários</a></li>
-            <li><a href="<?php echo site_url('departamentos') ?>">Departamentos</a></li>
+            <li class="<?php echo (url_is('clientes*') ? 'active' : ''); ?>"><a href="<?php echo site_url('clientes') ?>">Clientes</a></li>
+            <li class="<?php echo (url_is('usuarios*') ? 'active' : ''); ?>"><a href="<?php echo site_url('usuarios') ?>">Usuários</a></li>
+            <li class="<?php echo (url_is('departamentos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('departamentos') ?>">Departamentos</a></li>
           </ul>
         </li>
+
         <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
       </ul>
     </nav>
@@ -84,6 +98,7 @@
         </div>
       </div>
       <section class="no-padding-top no-padding-bottom">
+        <?php echo $this->include('layout/mensagens'); ?>
         <?php echo $this->renderSection('caminho'); ?>
         <?php echo $this->renderSection('conteudo'); ?>
       </section>
