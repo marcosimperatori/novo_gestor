@@ -50,6 +50,11 @@ $routes->get('usuarios/recuperausuarios', 'Usuario::recuperaUsuarios');
 //rotas de grupos
 $routes->get('grupos', 'Grupos::index');
 $routes->get('grupos/recuperagrupos', 'Grupos::recuperagrupos');
+$routes->get('grupos/grupobyid', 'Grupos::grupobyid');
+$routes->get('grupos/criar', 'Grupos::criar');
+
+$routes->get('clientes', 'Clientes::index');
+$routes->get('clientes/recuperaclientes', 'Clientes::recuperaclientes');
 
 //rotas de departamentos
 $routes->get('departamentos', 'Departamento::index');

@@ -10,15 +10,15 @@ class UsuarioSeeder extends Seeder
     {
         $usuarioModel = new \App\Models\UsuarioModel();
 
-        $faker = \Faker\Factory::create();
+        $faker = \Faker\Factory::create('pt_BR');
 
-        $qtdeRegistros = 3000;
+        $qtdeRegistros = 150;
 
         $usuariosPush = [];
 
         for ($i = 0; $i < $qtdeRegistros; $i++) {
             array_push($usuariosPush, [
-                'nome'          => $faker->unique()->name,
+                'nome'          => $faker->unique()->name(),
                 'email'         => $faker->unique()->email,
                 'password_hash' => '123456',
                 'ativo'         => $faker->numberBetween(0, 1),

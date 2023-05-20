@@ -27,6 +27,7 @@
         <?php echo $this->include('usuario/_form'); ?>
 
         <div class="form-group mt-5 mb-2">
+          <i id="loadingIcon" class="fa fa-spinner fa-spin text-warning" style="display: none;"></i>
           <input id="btn-salvar" type="submit" value="Salvar" class="btn btn-danger btn-sm mr-e">
 
           <a href="<?php echo site_url("usuarios/exibir/$usuario->id"); ?>" class="btn btn-secondary btn-sm ml-2">Voltar</a>
@@ -58,6 +59,7 @@
         beforeSend: function() {
           $("#response").html('');
           $("#btn-salvar").val('Aguarde...');
+          $('#loadingIcon').show();
         },
         success: function(response) {
           $("#btn-salvar").val('Salvar');
@@ -89,6 +91,9 @@
           alert("falha ao executar a operação");
           $("#btn-salvar").val('Salvar');
           $("#btn-salvar").removeAttr("disabled");
+        },
+        complete: function() {
+          $('#loadingIcon').hide();
         },
       });
     });

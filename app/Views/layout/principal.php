@@ -123,8 +123,16 @@
   <script src="<?php echo site_url('recursos/'); ?>vendor/jquery-validation/jquery.validate.min.js"></script>
   <script src="<?php echo site_url('recursos/'); ?>js/charts-home.js"></script>
   <script src="<?php echo site_url('recursos/'); ?>js/front.js"></script>
+  <script src="<?php echo site_url('recursos/'); ?>js/jquery.mask.min.js"></script>
+  <script src="<?php echo site_url('recursos/'); ?>js/app.js"></script>
 
   <?php echo $this->renderSection('scripts'); ?>
+
+  <script>
+    $(function() {
+      $('[data-toggle="popover"]').popover()
+    });
+  </script>
 </body>
 
 </html>
