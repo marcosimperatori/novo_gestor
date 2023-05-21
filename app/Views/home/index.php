@@ -20,10 +20,14 @@
           <div class="title">
             <div class="icon"><i class="icon-user-1"></i></div><strong>Clientes</strong>
           </div>
-          <div class="number dashtext-1">27</div>
+          <div class="number dashtext-1"><?php echo count($clientes); ?></div>
         </div>
         <div class="progress progress-template">
-          <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
+          <div role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
+        </div>
+
+        <div class="text-right mt-3">
+          <a href="<?php echo site_url("clientes"); ?>" class="dashtext-1">Acessar</a>
         </div>
       </div>
     </div>
@@ -36,7 +40,10 @@
           <div class="number dashtext-2">375</div>
         </div>
         <div class="progress progress-template">
-          <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
+          <div role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
+        </div>
+        <div class="text-right mt-3">
+          <a href="#" class="dashtext-2">Acessar</a>
         </div>
       </div>
     </div>
@@ -49,7 +56,10 @@
           <div class="number dashtext-3">140</div>
         </div>
         <div class="progress progress-template">
-          <div role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
+          <div role="progressbar" style="width: 100%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
+        </div>
+        <div class="text-right mt-3">
+          <a href="#" class="dashtext-3">Acessar</a>
         </div>
       </div>
     </div>
@@ -62,10 +72,14 @@
           <div class="number dashtext-4">41</div>
         </div>
         <div class="progress progress-template">
-          <div role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-4"></div>
+          <div role="progressbar" style="width: 100%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-4"></div>
+        </div>
+        <div class="text-right mt-3">
+          <a href="#" class="dashtext-4">Acessar</a>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 <?php $this->endSection(); ?>

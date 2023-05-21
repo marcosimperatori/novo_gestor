@@ -31,8 +31,6 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-//rotas de clientes
-$routes->get('clientes', 'Cliente::index');
 
 //rotas de usuários
 $routes->get('usuarios', 'Usuario::index');
@@ -53,11 +51,15 @@ $routes->get('grupos/recuperagrupos', 'Grupos::recuperagrupos');
 $routes->get('grupos/grupobyid', 'Grupos::grupobyid');
 $routes->get('grupos/criar', 'Grupos::criar');
 
+//rotas de clientes
 $routes->get('clientes', 'Clientes::index');
 $routes->get('clientes/recuperaclientes', 'Clientes::recuperaclientes');
 
 //rotas de departamentos
 $routes->get('departamentos', 'Departamento::index');
+
+$routes->get('pessoal', 'DepPessoal::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

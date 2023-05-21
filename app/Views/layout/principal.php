@@ -64,26 +64,32 @@
       <ul class="list-unstyled">
 
         <li class="<?php echo (url_is('/') ? 'active' : ''); ?>">
-          <a href="<?php echo site_url('/') ?>"> <i class="icon-home"></i>Home </a>
+          <a href="<?php echo site_url('/') ?>"> <i class="icon-home"></i>Início </a>
         </li>
 
-        <li class="<?php echo (url_is('usuarios*') ? 'active' : ''); ?>">
-          <a href="tables.html"> <i class="icon-grid"></i>Tables </a>
+        <li class="<?php echo (url_is('pessoal*') ? 'active' : ''); ?>">
+          <a href="<?php echo site_url('pessoal'); ?>"> <i class="icon-grid"></i>Depto Pessoal </a>
         </li>
 
         <li class="<?php echo (url_is('clientes*') ? 'active' : ''); ?>">
-          <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a>
+          <a href="charts.html"> <i class="fa fa-bar-chart"></i>Depto Fiscal </a>
         </li>
 
         <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>">
-          <a href="forms.html"> <i class="icon-padnote"></i>Forms </a>
+          <a href="forms.html"> <i class="icon-padnote"></i>Depto Contábil </a>
+        </li>
+
+        <li class="<?php echo (url_is('administrativo*') ? 'active' : ''); ?>">
+          <a href="<?php echo site_url('/') ?>"> <i class="icon-home"></i>Administrativo </a>
         </li>
 
         <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Cadastros </a>
           <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
             <li class="<?php echo (url_is('clientes*') ? 'active' : ''); ?>"><a href="<?php echo site_url('clientes') ?>">Clientes</a></li>
             <li class="<?php echo (url_is('usuarios*') ? 'active' : ''); ?>"><a href="<?php echo site_url('usuarios') ?>">Usuários</a></li>
-            <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('grupos') ?>">Grupos</a></li>
+            <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('grupos') ?>">Departamentos</a></li>
+            <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('grupos') ?>">Persmissões</a></li>
+            <li class="<?php echo (url_is('grupos*') ? 'active' : ''); ?>"><a href="<?php echo site_url('grupos') ?>">Obrigações</a></li>
           </ul>
         </li>
 

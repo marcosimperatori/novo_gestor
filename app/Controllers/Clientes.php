@@ -20,7 +20,7 @@ class Clientes extends BaseController
             'titulo' => 'Listando os clientes de acesso ao sistema',
         ];
 
-        return view('clientes/index', $data);
+        return view('cliente/index', $data);
     }
 
     public function recuperaclientes()
@@ -38,7 +38,6 @@ class Clientes extends BaseController
         $data = [];
 
         foreach ($clientes as $cliente) {
-
 
             $data[] = [
                 'codigo' => $cliente->codigo,
